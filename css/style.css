@@ -1,0 +1,286 @@
+:root {
+    --Amarelo-fundo: #FCC34F;
+    --cinza-fundo: #444444;
+    --modal: #0155A3;
+    --gr: #F57600;
+    --cinza-claro: #BABABA;
+    --branco-fundo: #f9fcfe;
+
+
+
+    --fonte-corpo: 'Montserrat', sans-serif;
+    --fonte-alternativa: 'Open Sans', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    color: var(--cinza-fundo);
+    background-color: var(--branco-fundo);
+}
+
+#header {
+    padding: 1rem 6.5rem 1rem 3rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 64px;
+    justify-content: space-between;
+    background-color: #F9FCFE;
+    box-shadow: 0px 4px 2px #BABABA;
+    /* position: fixed;
+    z-index: 9999;*/
+}
+
+#title-menu {
+    font-size: 16.5px;
+    cursor: default;
+}
+
+#title-menu .mark {
+    color: var(--Amarelo-fundo);
+}
+
+.ul-logo {
+
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    cursor: default;
+}
+
+
+#list-menu {
+    display: flex;
+    list-style: none;
+}
+
+#list-menu a {
+    display: block;
+    padding-left: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+#list-menu a:hover {
+    color: var(--Amarelo-fundo);
+    transition: .2s;
+}
+
+
+/* Home ==========================================*/
+
+.home-container {
+    /*padding-top: 9.75rem;*/
+    padding-top: 4.75rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'list img '
+        'socials img '
+        '. img';
+}
+
+.mancha-amarela {
+    position: absolute;
+    top: 110px;
+    z-index: 10;
+}
+
+
+.list-home {
+    grid-area: list;
+    display: flex;
+    flex-flow: column wrap;
+    height: auto;
+    padding-left: 12.5rem;
+    list-style: none;
+}
+
+.paragrafos-home {
+    display: flex;
+}
+
+.bem-vindo {
+
+    font-family: var(--fonte-corpo);
+    font-size: 3.3vw;
+    font-weight: bold;
+    cursor: default;
+}
+
+.apresentacao {
+    display: inline;
+    width: auto;
+    height: auto;
+    font-family: var(--fonte-corpo);
+    font-weight: bold;
+    font-size: 5vw;
+    cursor: default;
+}
+
+.apresentacao2 {
+
+    color: var(--Amarelo-fundo);
+    font-family: var(--fonte-corpo);
+    font-weight: bold;
+    min-width: 375px;
+    width: 37.5rem;
+    font-size: 5vw;
+    cursor: default;
+}
+
+.apresentacao3 {
+    font-family: var(--fonte-corpo);
+    font-weight: bold;
+    font-size: 1.66vw;
+    padding-bottom: 1.5rem;
+    cursor: default;
+}
+
+img.logo-esquilo {
+    display: inline-block;
+    align-self: center;
+    margin-left: 1.31rem;
+    width: 3vw;
+    height: auto;
+}
+
+.imagem-jony {
+    grid-area: img;
+    justify-self: center;
+    width: 40vw;
+    max-width: 435px;
+    min-width: 375px;
+}
+
+.list-socials {
+
+    padding-left: 12.5rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    grid-area: socials;
+}
+
+.icons {
+    align-items: center;
+}
+
+li.pixels {
+    display: inline-block;
+    padding: 0px 1.5px;
+    height: 3.5rem;
+}
+
+
+
+.btn-download {
+    font-weight: 400;
+    color: var(--cinza-fundo);
+    grid-column: 2;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border: 1px solid var(--cinza-fundo);
+    border-radius: 0.25rem;
+}
+
+.button a:hover {
+    background-color: var(--Amarelo-fundo);
+    color: #F9FCFE;
+    transition: .3s ease;
+}
+
+.button {
+    gap: 2px;
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    padding-left: 1.5rem;
+}
+
+.button .pixel1 {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.button .pixel2 {
+    grid-column: 1;
+    grid-row: 2;
+
+}
+
+.icons:hover {
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--cinza-fundo);
+    transition: .1s ease;
+}
+
+
+/* Sobre --============================================== */
+
+section.sobre-container {
+    background-color: var(--Amarelo-fundo);
+    display: flex;
+    width: 100%;
+    height: 51rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 12.25rem;
+    cursor: default;
+
+}
+
+.mancha-sobre {
+    position: absolute;
+    right: 0;
+}
+
+.imagem-sobre {
+    width: 100%;
+    min-width: 375px;
+    height: auto;
+    padding-left: 2.81rem;
+    margin-top: 6.93rem;
+
+
+}
+
+.title-sobre {
+    font-size: 4.5rem;
+    margin: 8.43rem 0px 2.87rem 4.56rem;
+
+}
+
+.conteudo-sobre .sobre-text {
+
+    width: 37.81rem;
+    height: auto;
+
+    margin: 0px 11.5rem 0px 4.28rem;
+
+    text-align: left;
+    text-indent: 18px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+
+}
+
+span.textmark {
+    color: var(--modal);
+}
+
+span.textmark1 {
+    color: var(--gr);
+}
+
+span.textmark2 {
+    background-color: var(--cinza-fundo);
+    color: var(--Amarelo-fundo);
+    padding: 0px 3px;
+}
