@@ -1,3 +1,3 @@
-# portifólio de joao Henrique
+# Portifólio de Joao Henrique
 
- portifólio criado no figma por Joao Henrique(UX-UI) e codado por Gabriel.
+ Portifólio criado no figma por Joao Henrique (UX-UI) e codado por Gabriel.
