@@ -83,16 +83,25 @@ body {
 .home-container {
     padding-top: 9.75rem;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
     grid-template-areas: 'list img '
         'socials img '
-        '. img';
+        '.  img';
+}
+
+.imagens-home {
+    max-width: 400px;
+    grid-column: 2;
+    grid-row: 1;
+    grid-area: img;
 }
 
 .mancha-amarela {
     position: absolute;
     top: 110px;
+    width: 168px;
     z-index: 10;
+
 }
 
 
@@ -103,10 +112,15 @@ body {
     height: auto;
     padding-left: 12.5rem;
     list-style: none;
+
 }
 
 .paragrafos-home {
     display: flex;
+}
+
+div.container-socials {
+    max-width: 600px;
 }
 
 .bem-vindo {
@@ -115,6 +129,7 @@ body {
     font-size: 3.3vw;
     font-weight: bold;
     cursor: default;
+
 }
 
 .apresentacao {
@@ -155,20 +170,17 @@ img.logo-esquilo {
 }
 
 .imagem-jony {
-    grid-area: img;
-    justify-self: center;
-    width: 40vw;
-    max-width: 435px;
-    min-width: 375px;
+    width: 100%;
 }
 
 .list-socials {
-
     padding-left: 12.5rem;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     grid-area: socials;
+    width: 100%;
 }
 
 .icons {
@@ -264,14 +276,12 @@ section.sobre-container {
 
 .conteudo-sobre .sobre-text {
 
-    width: 37.81rem;
+    max-width: 43.5vw;
     height: auto;
-
     margin: 0px 11.5rem 0px 4.28rem;
-
     text-align: left;
     text-indent: 18px;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 600;
     line-height: 2rem;
 
@@ -379,6 +389,7 @@ section.formacao-container {
     margin-top: 126px;
     flex-flow: column;
     align-items: center;
+    background-position: center center;
     background-color: var(--cinza-fundo);
     background-image: url('/Jony-portifolio/imagens/fomacao-borda2.png');
     background-repeat: no-repeat;
@@ -480,4 +491,340 @@ footer.joinha {
 
 .img-joinha {
     padding-top: 8rem;
+}
+
+@media (max-width: 1250px) {
+
+    .imagemxp-jony {
+        display: none;
+
+    }
+
+    #XP {
+        background-color: var(--branco-fundo);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    xp-title {
+        text-align: center;
+        font-size: 4.5rem;
+    }
+
+    section.formacao-container {
+        display: flex;
+        width: 100%;
+        height: 4035px;
+        margin-top: 126px;
+        flex-flow: column;
+        align-items: center;
+        background-color: var(--cinza-fundo);
+        background-position: center center;
+        background-image: url(/Jony-portifolio/imagens/fomacao-borda2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1150px) {
+
+    img.mancha-sobre {
+        display: none;
+    }
+
+    .mancha-amarela {
+        position: absolute;
+        top: 110px;
+        width: 10%;
+        z-index: 10;
+        max-width: 200px;
+    }
+
+    .conteudo-sobre .sobre-text {
+        max-width: 600px;
+        height: auto;
+        margin: 3px 4.5rem 0px 4.28rem;
+        text-align: justify;
+        text-indent: 18px;
+        font-size: 1.5em;
+        font-weight: 600;
+        line-height: 2rem;
+    }
+
+    .imagemxp-jony {
+        display: none;
+    }
+
+    section.formacao-container {
+        display: flex;
+        width: 100%;
+        height: 4035px;
+        margin-top: 126px;
+        flex-flow: column;
+        align-items: center;
+        background-color: var(--cinza-fundo);
+        background-position: center center;
+        background-image: url(/Jony-portifolio/imagens/fomacao-borda2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (max-width:1000px) {
+
+    /*HEADER ======================================================*/
+    #header {
+        padding: 1rem 2.5rem 1rem 1rem;
+
+    }
+
+    /*Home =======================================================*/
+
+    .list-home {
+        grid-area: list;
+        display: flex;
+        flex-flow: column wrap;
+        height: auto;
+        padding-left: 5rem;
+        list-style: none;
+    }
+
+    .list-socials {
+        padding-left: 5rem;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        grid-area: socials;
+        max-width: 375px;
+    }
+
+    .icons {
+        align-items: center;
+        width: 100%;
+    }
+
+    .btn-download {
+        display: block;
+        font-weight: 400;
+        color: var(--cinza-fundo);
+        grid-column: 2;
+        text-decoration: none;
+        padding: .5rem 1rem;
+        border: 1px solid var(--cinza-fundo);
+        border-radius: 0.25rem;
+        font-family: var(--fonte-botão);
+        font-size: 15px;
+    }
+
+    li.button {
+        padding-left: 0;
+    }
+
+    img.pixel1 {
+        width: 15px;
+    }
+
+    img.pixel2 {
+        width: 12px;
+    }
+
+    .bem-vindo {
+
+        font-family: var(--fonte-corpo);
+        font-size: 3em;
+        font-weight: bold;
+        cursor: default;
+
+    }
+
+    .apresentacao {
+        display: inline;
+        width: auto;
+        height: auto;
+        font-family: var(--fonte-corpo);
+        font-weight: bold;
+        font-size: 3em;
+        cursor: default;
+    }
+
+    .apresentacao2 {
+
+        color: var(--Amarelo-fundo);
+        font-family: var(--fonte-corpo);
+        font-weight: bold;
+        min-width: 375px;
+        width: 37.5rem;
+        font-size: 3.5em;
+        cursor: default;
+    }
+
+    .apresentacao3 {
+        font-family: var(--fonte-corpo);
+        font-weight: bold;
+        font-size: 1em;
+        padding-bottom: 1.5rem;
+        cursor: default;
+    }
+
+    img.logo-esquilo {
+        display: inline-block;
+        align-self: center;
+        margin-left: .5rem;
+        width: 30px;
+        height: auto;
+    }
+
+    /*Sobre ===========================================================*/
+    section.sobre-container {
+        background-color: var(--Amarelo-fundo);
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: normal;
+        align-items: center;
+        margin-top: 12.25rem;
+        padding: 3rem 0px;
+        cursor: default;
+    }
+
+
+    .imagem-sobre {
+        max-width: 375px;
+        padding: 50px 0px 0px 0px;
+        margin: 0;
+    }
+
+    .title-sobre {
+        font-size: 3.5rem;
+        text-align: center;
+        margin: 0;
+    }
+
+
+    .conteudo-sobre .sobre-text {
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+        text-align: justify;
+        text-indent: 18px;
+        font-size: 1.5em;
+        font-weight: 600;
+        line-height: 2.5rem;
+        margin: 5px 5px 50px 5px;
+    }
+
+    .conteudo-sobre {
+        padding-top: 30px;
+        max-width: 600px;
+    }
+
+    .mancha-sobre {
+        display: none;
+        position: none;
+    }
+
+
+    /*Experiencias ===========================================================*/
+
+
+    #XP {
+        background-color: var(--branco-fundo);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .xp-title {
+        padding-top: 40px;
+        font-size: 4.5rem;
+        margin: 0 auto;
+    }
+
+    .box-exp {
+        max-width: 695px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .imagemxp-jony {
+        display: none;
+    }
+
+    /*Formacao ==========================================================*/
+    section.formacao-container {
+        display: flex;
+        width: 100%;
+        height: 4035px;
+        margin-top: 126px;
+        flex-flow: column;
+        align-items: center;
+        background-color: var(--cinza-fundo);
+        background-position: center center;
+        background-image: url(/Jony-portifolio/imagens/fomacao-borda2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    #header {
+        padding: 1rem 2.5rem 1rem 1rem;
+        display: flex;
+        width: 100vw;
+        align-items: center;
+        height: 64px;
+        justify-content: space-between;
+        background-color: #F9FCFE;
+        box-shadow: 0px 4px 2px #BABABA;
+        position: fixed;
+        z-index: 9999;
+    }
+
+    #nav {
+        display: block;
+        background-color: var(--cinza-fundo);
+        width: 25px;
+        height: 3px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+
+    #nav::before {
+        content: '';
+        display: block;
+        position: relative;
+        top: 10px;
+        background-color: var(--cinza-fundo);
+        width: 25px;
+        height: 3px;
+        border-radius: 4px;
+    }
+
+    #nav::after {
+        content: '';
+        display: block;
+        position: relative;
+        background-color: var(--cinza-fundo);
+        width: 25px;
+        height: 3px;
+        border-radius: 4px;
+        margin-top: 17px;
+    }
+
+    #list-menu a {
+        display: none;
+        padding-left: 3rem;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .active {}
 }
