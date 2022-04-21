@@ -18,15 +18,18 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px;
+}
+
 body {
     font-family: var(--fonte-corpo);
     color: var(--cinza-fundo);
     background-color: var(--branco-fundo);
 }
 
-main {
-    width: 100%;
-}
+main {}
 
 #header {
     padding: 1rem 6.5rem 1rem 3rem;
@@ -707,6 +710,7 @@ footer p.agradecimento {
         flex-direction: column;
         height: auto;
         justify-content: normal;
+        text-align: center;
         align-items: center;
         margin-top: 12.25rem;
         padding: 3rem 0px;
@@ -1051,8 +1055,9 @@ footer p.agradecimento {
     }
 
     .home-container {
-        padding-top: 9.75rem;
+        padding: 9.75rem 0px;
         display: flex;
+        align-items: center;
         flex-direction: column;
         width: 100%;
 
@@ -1061,6 +1066,7 @@ footer p.agradecimento {
     .mancha-amarela {
         position: absolute;
         top: 0px;
+        left: 0px;
         width: 20%;
         z-index: 10;
         max-width: 200px;
@@ -1071,19 +1077,14 @@ footer p.agradecimento {
         flex-flow: column;
         height: auto;
         align-items: center;
-        width: 90%;
+        width: 100%;
         padding: 0px;
         list-style: none;
     }
 
-    .paragrafos-home {
-        padding-left: 0px;
-        text-align: center;
-    }
-
     .bem-vindo {
         font-family: var(--fonte-corpo);
-        font-size: 2.5em;
+        font-size: 3em;
         font-weight: bold;
         cursor: default;
     }
@@ -1094,7 +1095,7 @@ footer p.agradecimento {
         height: auto;
         font-family: var(--fonte-corpo);
         font-weight: bold;
-        font-size: 2.5em;
+        font-size: 3em;
         cursor: default;
 
     }
@@ -1103,10 +1104,15 @@ footer p.agradecimento {
         color: var(--Amarelo-fundo);
         font-family: var(--fonte-corpo);
         font-weight: bold;
-        font-size: 2.5em;
+        font-size: 3em;
         cursor: default;
         text-align: center;
         width: auto;
+    }
+
+    .apresentacao3 {
+        font-size: 1.2em;
+
     }
 
     .list-socials {
@@ -1299,4 +1305,58 @@ footer p.agradecimento {
         font-size: 2rem;
     }
 
+    [data-anime] {
+        opacity: 0;
+        width: 70%;
+        transition: .1s ease;
+    }
+
+    [data-anime="left"] {
+        transform: translate3d(-50px, 0, 0);
+
+    }
+
+    [data-anime="top"] {
+        transform: translate3d(0, -50px, 0);
+
+    }
+
+    [data-anime="right"] {
+        transform: translate3d(50px, 0, 0);
+
+    }
+
+    [data-anime].animate {
+        opacity: 1;
+        width: 100%;
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+}
+
+[data-anime] {
+    opacity: 0;
+    overflow: hidden;
+    transition: .2s ease;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-20px, 0, 0);
+    overflow: hidden;
+}
+
+[data-anime="top"] {
+    transform: translate3d(0, -50px, 0);
+    overflow: hidden;
+}
+
+[data-anime="right"] {
+    transform: translate3d(5px, 0, 0);
+    overflow: hidden;
+}
+
+[data-anime].animate {
+    opacity: 1;
+    overflow: hidden;
+    transform: translate3d(0px, 0px, 0px);
 }
