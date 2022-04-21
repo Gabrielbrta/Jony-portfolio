@@ -454,6 +454,7 @@ div.box-conteudo {
 .logo-formacoes {
     border: 4px solid var(--cinza-fundo);
     border-radius: 4px;
+    width: 20%;
 }
 
 /* BOX Formações =================================================*/
