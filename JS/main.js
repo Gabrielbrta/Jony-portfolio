@@ -1,10 +1,23 @@
 
 /*Toggle menu ================================== */
 const botao = document.querySelector('#btn-mobile');
-const menuLinks = document.querySelectorAll('#list-menu li a');
+const menuLinks = document.querySelectorAll('#list-menu li a[href^="#"]');
 const nav = document.querySelector('#nav');
 
+/* Scroll Suave -------------------------------------------------------*/
+menuLinks.forEach(item => {
+  item.addEventListener('click', scrollToId)
+})
 
+function scrollToId(event){
+  event.preventDefault();
+  const element = event.target;
+  const id = element.getAttribute('href');
+  const to = document.querySelector(id).offsetTop;
+
+  window.scroll(0, to - 75);
+}
+/* ----------------------------------------------------------------- */
 function toggleMenu(event){
     if(event.type === 'touchstart')event.preventDefault();
 
@@ -26,15 +39,20 @@ function toggleMenu(event){
     
 }
 
-for(const links of menuLinks){
-  links.addEventListener('click', function(){
-    nav.classList.remove('active')
-  })
-}
-
-
 botao.addEventListener('touchstart', toggleMenu);
 botao.addEventListener('click', toggleMenu);
+
+/*Fechar menu  --------------------------------------------------------------*/
+
+  for(const links of menuLinks){
+    links.addEventListener('click', function(){
+      nav.classList.remove('active');
+    })
+  }
+
+/*--------------------------------------------------------------*/
+
+
 
 
 /*const links = document.querySelectorAll('nav ul li a');
