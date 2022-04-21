@@ -16,17 +16,23 @@
     
 </head>
 <body>
+    <main>
     <header id="header">
         <ul class="ul-logo">
             <li><img class="logo-menu" src="./imagens/logo-esquilo-menu.png" alt="logo de um esquilo"></li>
             <li> <h1 id="title-menu"><span class="mark">JoNy's</span> Portifólio</h1></li>
         </ul>
         <nav id="nav" class="active">
-            <ul id="list-menu">
-                <li><a href="#HOME">Home</a></li>
-                <li><a href="#SOBRE">Sobre</a></li>
-                <li><a href="#XP">Experiência</a></li>
-                <li><a href="#FORMACAO">Formação</a></li>
+            <button id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-expanded="false" aria-controls="list-menu">
+
+            <span id="hamburguer"></span>
+
+            </button>
+            <ul id="list-menu" role="menu">
+                <li><a class="menu-links" href="#HOME">Home</a></li>
+                <li><a class="menu-links" href="#SOBRE">Sobre</a></li>
+                <li><a class="menu-links" href="#XP">Experiência</a></li>
+                <li><a class="menu-links" href="#FORMACAO">Formação</a></li>
             </ul>
         </nav>
     </header>
@@ -298,9 +304,9 @@
             <footer class="formacao-conteudo joinha">
                 
                 <img class="img-joinha" src="./imagens/joinha-final.png" alt="imagem de uma mão fazendo joinha">
-                <p class="subtitle-formacao">Obrigado por Scrollar</p>
+                <p class="agradecimento">Obrigado por Scrollar</p>
 
-                </div>
+                
             </footer>
         </section>
 

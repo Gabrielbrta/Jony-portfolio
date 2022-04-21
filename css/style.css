@@ -24,6 +24,10 @@ body {
     background-color: var(--branco-fundo);
 }
 
+main {
+    width: 100%;
+}
+
 #header {
     padding: 1rem 6.5rem 1rem 3rem;
     display: flex;
@@ -35,6 +39,10 @@ body {
     box-shadow: 0px 4px 2px #BABABA;
     position: fixed;
     z-index: 9999;
+}
+
+#btn-mobile {
+    display: none;
 }
 
 #title-menu {
@@ -493,6 +501,13 @@ footer.joinha {
     padding-top: 8rem;
 }
 
+footer p.agradecimento {
+    padding: 3.5rem 0px 5rem 0px;
+    color: var(--Amarelo-fundo);
+    text-align: center;
+    font-size: 2rem;
+}
+
 @media (max-width: 1250px) {
 
     .imagemxp-jony {
@@ -516,7 +531,7 @@ footer.joinha {
     section.formacao-container {
         display: flex;
         width: 100%;
-        height: 4035px;
+        height: auto;
         margin-top: 126px;
         flex-flow: column;
         align-items: center;
@@ -560,7 +575,7 @@ footer.joinha {
     section.formacao-container {
         display: flex;
         width: 100%;
-        height: 4035px;
+        height: auto;
         margin-top: 126px;
         flex-flow: column;
         align-items: center;
@@ -569,6 +584,13 @@ footer.joinha {
         background-image: url(/Jony-portifolio/imagens/fomacao-borda2.png);
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    footer p.agradecimento {
+        padding: 3.5rem 0px 15rem 0px;
+        color: var(--Amarelo-fundo);
+        text-align: center;
+        font-size: 2rem;
     }
 }
 
@@ -759,7 +781,7 @@ footer.joinha {
     section.formacao-container {
         display: flex;
         width: 100%;
-        height: 4035px;
+        height: auto;
         margin-top: 126px;
         flex-flow: column;
         align-items: center;
@@ -769,10 +791,62 @@ footer.joinha {
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    footer p.agradecimento {
+        padding: 3.5rem 0px 15rem 0px;
+        color: var(--Amarelo-fundo);
+        text-align: center;
+        font-size: 2rem;
+    }
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 0rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+    }
+
+    #hamburguer {
+        width: 20px;
+        color: var(--cinza-fundo);
+        border-top: 2px solid;
+        display: block;
+    }
+
+    #hamburguer::after,
+    #hamburguer::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+        background: currentColor;
+        transition: .3s ease;
+        position: relative;
+    }
+
+    #nav.active #hamburguer {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    .imagem-jony {
+        display: none;
+    }
 
     #header {
         padding: 1rem 2.5rem 1rem 1rem;
@@ -784,47 +858,443 @@ footer.joinha {
         background-color: #F9FCFE;
         box-shadow: 0px 4px 2px #BABABA;
         position: fixed;
-        z-index: 9999;
-    }
-
-    #nav {
-        display: block;
-        background-color: var(--cinza-fundo);
-        width: 25px;
-        height: 3px;
-        border-radius: 4px;
-        cursor: pointer;
-        margin-bottom: 15px;
-    }
-
-    #nav::before {
-        content: '';
-        display: block;
-        position: relative;
-        top: 10px;
-        background-color: var(--cinza-fundo);
-        width: 25px;
-        height: 3px;
-        border-radius: 4px;
-    }
-
-    #nav::after {
-        content: '';
-        display: block;
-        position: relative;
-        background-color: var(--cinza-fundo);
-        width: 25px;
-        height: 3px;
-        border-radius: 4px;
-        margin-top: 17px;
+        z-index: 40;
     }
 
     #list-menu a {
-        display: none;
-        padding-left: 3rem;
+        padding: 2rem 0px;
+        text-align: center;
+        border-bottom: 1px solid #dfdddd85;
+    }
+
+
+    #list-menu {
+        position: absolute;
+        display: block;
+        z-index: 999;
+        background-color: var(--branco-fundo);
+        height: 0px;
+        top: 60px;
+        right: 0px;
+        width: 100%;
+        transition: .6s;
         text-decoration: none;
+        font-size: 1rem;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #list-menu {
+        height: 100vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+
+    /* EXPERIENCIA ===================================================================*/
+
+    .container-projeto {
+        display: flex;
+        width: 90%;
+        flex-flow: column wrap;
+        background-color: var(--Amarelo-fundo);
+        box-shadow: 1rem 1rem 0px var(--cinza-fundo);
+        border-radius: 1rem;
+    }
+
+    .box-exp {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .xp-title {
+        padding: 40px 0px;
+        font-size: 3rem;
+        margin: 0 auto;
+    }
+
+    .xp-conteudo {
+        padding-bottom: 1.5rem;
+        font-size: 1.5rem;
+        text-align: justify;
+        font-weight: 600;
+    }
+
+    .title-project {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding: 0.5rem 0rem 1.5rem 0rem;
+    }
+
+    .logo-container .freepass {
+        padding-right: 0px;
+    }
+
+    .img-project {
+        padding: 10px;
+    }
+
+    .box2 .xp-title {
+        text-align: center;
+    }
+
+    /* FORMACAO ===================================================================*/
+
+    section.formacao-container {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin-top: 6rem;
+        flex-flow: column;
+        align-items: center;
+        background-color: var(--cinza-fundo);
+        background-position: center center;
+        background-image: url(/Jony-portifolio/imagens/fomacao-borda.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .formacao-conteudo {
+        /* max-width: 665px; */
+        width: 90%;
+    }
+
+    .title-formacao {
+        display: block;
+        padding-top: 5rem;
+        font-size: 3.5rem;
+        text-align: center;
+        color: var(--Amarelo-fundo);
+    }
+
+    .subtitle-formacao {
+        padding: 3.5rem 0px 2rem 0px;
+        color: var(--Amarelo-fundo);
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    div.box-conteudo {
+        width: 100%;
+        background-color: var(--branco-fundo);
+        padding: 5px;
+        border-radius: 8px;
+        display: flex;
+    }
+
+    .logo-formacoes {
+        width: 30%;
+        border: 4px solid var(--cinza-fundo);
+        border-radius: 4px;
+    }
+
+    .curso-udemy {
+        border: none;
+    }
+
+    .title-box {
+        font-size: 2.5rem;
+        font-weight: 400;
+        padding: 0px 0px 10px 1rem;
+    }
+
+    .text-box {
+        padding-left: 1rem;
+        font-size: 1.5rem;
+    }
+
+    div.alura .box-text h3 {
+        font-family: var(--fonte-corpo);
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    div.alura .box-text p {
+        font-family: var(--fonte-corpo);
+        font-size: 1.5rem;
+    }
+
+    .box-text .cursos-fora {
+        font-size: 2.25rem;
+        font-family: serif;
+    }
+
+    footer p.agradecimento {
+        padding: 3.5rem 0px 15rem 0px;
+        color: var(--Amarelo-fundo);
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 600px) {
+
+    #header {
+        padding: 1rem 1.5rem 1rem 1rem;
+    }
+
+    .imagem-jony {
+        display: none;
+    }
+
+    .home-container {
+        padding-top: 9.75rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .mancha-amarela {
+        position: absolute;
+        top: 0px;
+        width: 20%;
+        z-index: 10;
+        max-width: 200px;
+    }
+
+    .list-home {
+        display: flex;
+        flex-flow: column;
+        height: auto;
+        align-items: center;
+        width: 90%;
+        padding: 0px;
+        list-style: none;
+    }
+
+    .paragrafos-home {
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    .bem-vindo {
+        font-family: var(--fonte-corpo);
+        font-size: 2.5em;
+        font-weight: bold;
+        cursor: default;
+    }
+
+    .apresentacao {
+        display: inline;
+        width: auto;
+        height: auto;
+        font-family: var(--fonte-corpo);
+        font-weight: bold;
+        font-size: 2.5em;
+        cursor: default;
+
+    }
+
+    .apresentacao2 {
+        color: var(--Amarelo-fundo);
+        font-family: var(--fonte-corpo);
+        font-weight: bold;
+        font-size: 2.5em;
+        cursor: default;
+        text-align: center;
+        width: auto;
+    }
+
+    .list-socials {
+        padding: 2rem 1rem;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-download {
+        display: block;
+        font-weight: 400;
+        color: var(--cinza-fundo);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--cinza-fundo);
+        border-radius: 0.25rem;
+        font-family: var(--fonte-botão);
+        font-size: 20px;
+    }
+
+    /*Sobre =====================================================================*/
+
+    section.sobre-container {
+        margin-top: 6rem;
+
+    }
+
+    .title-sobre {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .conteudo-sobre .sobre-text {
+        height: auto;
+        text-align: justify;
+        text-indent: 18px;
+        font-size: 1.25em;
+        font-weight: 600;
+        line-height: 2.5rem;
+        margin: 5px 20px 50px 20px;
+    }
+
+    /*Experiencias =================================================================*/
+
+    .container-projeto {
+        display: flex;
+        width: 90%;
+        flex-flow: column wrap;
+        background-color: var(--Amarelo-fundo);
+        box-shadow: 1rem 1rem 0px var(--cinza-fundo);
+        border-radius: 1rem;
+    }
+
+    .box-exp {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .xp-title {
+        padding: 40px 0px;
+        font-size: 3rem;
+        margin: 0 auto;
+    }
+
+    .xp-conteudo {
+        padding-bottom: 1.5rem;
+        font-size: 1.5rem;
+        text-align: justify;
+        font-weight: 600;
+    }
+
+    .title-project {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding: 0.5rem 0rem 1.5rem 0rem;
+    }
+
+    .logo-container .freepass {
+        padding-right: 0px;
+    }
+
+    .img-project {
+        padding: 10px;
+    }
+
+    .box2 .xp-title {
+        text-align: center;
+    }
+
+    /*Formação ======================================================*/
+
+    section.formacao-container {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin-top: 6rem;
+        flex-flow: column;
+        align-items: center;
+        background-color: var(--cinza-fundo);
+        background-position: center center;
+        background-image: url(/Jony-portifolio/imagens/fomacao-borda.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .formacao-conteudo {
+        /* max-width: 665px; */
+        width: 90%;
+    }
+
+    .title-formacao {
+        display: block;
+        padding-top: 5rem;
+        font-size: 3.5rem;
+        text-align: center;
+        color: var(--Amarelo-fundo);
+    }
+
+    .subtitle-formacao {
+        padding: 3.5rem 0px 2rem 0px;
+        color: var(--Amarelo-fundo);
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    div.box-conteudo {
+        /* width: 665px; */
+        width: 100%;
+        background-color: var(--branco-fundo);
+        padding: 5px;
+        border-radius: 8px;
+        display: flex;
+    }
+
+    .logo-formacoes {
+        width: 30%;
+        border: 4px solid var(--cinza-fundo);
+        border-radius: 4px;
+    }
+
+    .curso-udemy {
+        border: none;
+    }
+
+    .title-box {
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding: 0px 0px 10px 1rem;
+    }
+
+    .text-box {
+        padding-left: 1rem;
+        font-size: 1.2rem;
+    }
+
+    div.alura .box-text h3 {
+        font-family: var(--fonte-corpo);
+        font-weight: 600;
         font-size: 1rem;
     }
 
-    .active {}
+    div.alura .box-text p {
+        font-family: var(--fonte-corpo);
+        font-size: 1rem;
+    }
+
+    .box-text .cursos-fora {
+        font-size: 1.25rem;
+        font-family: serif;
+    }
+
+    footer p.agradecimento {
+        padding: 3.5rem 0px 15rem 0px;
+        color: var(--Amarelo-fundo);
+        text-align: center;
+        font-size: 2rem;
+    }
+
 }
