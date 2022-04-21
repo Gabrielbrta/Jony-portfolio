@@ -70,6 +70,7 @@ main {
 }
 
 #list-menu a {
+    color: var(--cinza-fundo);
     display: block;
     padding-left: 3rem;
     text-decoration: none;
@@ -863,6 +864,7 @@ footer p.agradecimento {
 
     #list-menu a {
         padding: 2rem 0px;
+        color: var(--cinza-fundo);
         text-align: center;
         border-bottom: 1px solid #dfdddd85;
     }
