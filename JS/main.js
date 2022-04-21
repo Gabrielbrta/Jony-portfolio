@@ -1,7 +1,8 @@
 
 
 const botao = document.querySelector('#btn-mobile');
-let menuLinks = document.querySelectorAll('#list-menu li a');
+const menuLinks = document.querySelectorAll('#list-menu li a');
+const nav = document.querySelector('#nav');
 console.log(menuLinks)
 
 
@@ -26,6 +27,22 @@ function toggleMenu(event){
     
 }
 
+for(const links of menuLinks){
+  links.addEventListener('click', function(){
+    nav.classList.remove('active')
+  })
+}
+
 
 botao.addEventListener('touchstart', toggleMenu);
 botao.addEventListener('click', toggleMenu);
+
+/*const links = document.querySelectorAll('nav ul li a');
+
+for (const link of links){
+    link.addEventListener('click', function(){
+    nav.classList.remove('show')    
+    })
+}
+
+*/
