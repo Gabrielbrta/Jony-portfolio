@@ -29,7 +29,6 @@ body {
     background-color: var(--branco-fundo);
 }
 
-main {}
 
 #header {
     padding: 1rem 6.5rem 1rem 3rem;
@@ -50,7 +49,6 @@ main {}
 
 #title-menu {
     font-size: 16.5px;
-    cursor: default;
 }
 
 #title-menu .mark {
@@ -58,12 +56,10 @@ main {}
 }
 
 .ul-logo {
-
     display: flex;
     align-items: center;
     list-style: none;
     gap: 20px;
-    cursor: default;
 }
 
 
@@ -316,7 +312,8 @@ span.textmark2 {
 /* EXPERIÊNCIAS ==================================*/
 
 #XP {
-    background-color: var(--branco-fundo);
+    background-color: #f9fcf3;
+    ;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 4.18rem 2.68rem 0px 6rem;
@@ -476,6 +473,15 @@ div.alura .box-text p {
 
 .curso-udemy {
     border: none;
+}
+
+.USP img {
+    border: none;
+}
+
+.callep img {
+    border: none;
+    border-radius: 25px;
 }
 
 .title-udemy {
@@ -1335,29 +1341,99 @@ footer p.agradecimento {
 
 }
 
+@media (min-width: 1600px) {
+
+    .home-container {
+        max-width: 1440px;
+        margin: 0 auto;
+
+    }
+
+    .imagem-jony {
+        width: auto;
+    }
+
+    .mancha-amarela {
+        top: 110px;
+        left: 0px;
+    }
+
+    .apresentacao2 {
+        width: auto;
+        font-size: 4vw;
+
+    }
+
+    .title-sobre {
+        margin: 8.43rem 0px 1.87rem 9.18rem;
+    }
+
+    .conteudo-sobre .sobre-text {
+        max-width: 600px;
+        margin-left: 8.56rem;
+        margin-right: 0px;
+        line-height: 2rem;
+    }
+
+    .imagem-sobre {
+        width: auto;
+        margin-left: 0px;
+    }
+
+
+
+    section.sobre-container {
+        background-color: var(--Amarelo-fundo);
+        display: flex;
+        height: 51rem;
+        justify-content: center;
+
+    }
+
+    .mancha-sobre {
+        display: block;
+        right: 0;
+    }
+
+    #XP {
+        background-color: #f9fcf3;
+        display: grid;
+        max-width: 1440px;
+        margin: 4.18rem auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .imagemxp-jony {
+        width: auto;
+        height: auto;
+    }
+
+    section.formacao-container {
+        max-width: 1440px;
+        height: 4035px;
+        margin: 126px auto 0px auto;
+
+    }
+}
+
 [data-anime] {
     opacity: 0;
-    overflow: hidden;
     transition: .2s ease;
 }
 
 [data-anime="left"] {
     transform: translate3d(-20px, 0, 0);
-    overflow: hidden;
 }
 
 [data-anime="top"] {
     transform: translate3d(0, -50px, 0);
-    overflow: hidden;
 }
 
 [data-anime="right"] {
     transform: translate3d(5px, 0, 0);
-    overflow: hidden;
 }
 
 [data-anime].animate {
     opacity: 1;
-    overflow: hidden;
     transform: translate3d(0px, 0px, 0px);
 }
