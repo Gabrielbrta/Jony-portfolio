@@ -1387,7 +1387,7 @@ footer p.agradecimento {
         display: flex;
         height: 51rem;
         justify-content: center;
-        margin-top: 18.25rem;
+        margin-top: 20.25rem;
     }
 
     .mancha-sobre {
@@ -1412,7 +1412,9 @@ footer p.agradecimento {
         max-width: 1440px;
         height: 4035px;
         margin: 126px auto 0px auto;
-
+        background-color: var(--cinza-fundo);
+        background-image: url(/Jony-portifolio/imagens/fomacao-borda.png);
+        background-size: contain;
     }
 }
 
