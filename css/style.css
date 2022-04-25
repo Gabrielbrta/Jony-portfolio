@@ -1409,7 +1409,7 @@ footer p.agradecimento {
     }
 
     section.formacao-container {
-        max-width: 1440px;
+        max-width: auto;
         height: 4035px;
         margin: 126px auto 0px auto;
         background-color: var(--cinza-fundo);
