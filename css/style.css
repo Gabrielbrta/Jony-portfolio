@@ -1240,14 +1240,13 @@ footer p.agradecimento {
     }
 
     .formacao-conteudo {
-        /* max-width: 665px; */
         width: 90%;
     }
 
     .title-formacao {
         display: block;
-        padding-top: 5rem;
-        font-size: 3.5rem;
+        margin-top: 2em;
+        font-size: 2.5rem;
         text-align: center;
         color: var(--Amarelo-fundo);
     }
@@ -1260,12 +1259,16 @@ footer p.agradecimento {
     }
 
     div.box-conteudo {
-        /* width: 665px; */
         width: 100%;
         background-color: var(--branco-fundo);
         padding: 5px;
         border-radius: 8px;
         display: flex;
+    }
+
+    div.box-external {
+        width: 95%;
+        margin: 0 auto;
     }
 
     .logo-formacoes {
