@@ -400,7 +400,7 @@ section.formacao-container {
     align-items: center;
     background-position: center center;
     background-color: var(--cinza-fundo);
-    background-image: url('/imagens/fomacao-borda2.png');
+    background-image: url('/Jony-portifolio/imagens/fomacao-borda2.png');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -548,7 +548,7 @@ footer p.agradecimento {
         align-items: center;
         background-color: var(--cinza-fundo);
         background-position: center center;
-        background-image: url(/imagens/fomacao-borda2.png);
+        background-image: url(/Jony-portifolio/imagens/fomacao-borda2.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -592,7 +592,7 @@ footer p.agradecimento {
         align-items: center;
         background-color: var(--cinza-fundo);
         background-position: center center;
-        background-image: url(/imagens/fomacao-borda2.png);
+        background-image: url(/Jony-portifolio/imagens/fomacao-borda2.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -799,7 +799,7 @@ footer p.agradecimento {
         align-items: center;
         background-color: var(--cinza-fundo);
         background-position: center center;
-        background-image: url(/imagens/fomacao-borda2.png);
+        background-image: url(/Jony-portifolio/imagens/fomacao-borda2.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -973,7 +973,7 @@ footer p.agradecimento {
         align-items: center;
         background-color: var(--cinza-fundo);
         background-position: center center;
-        background-image: url(/imagens/fomacao-borda.png);
+        background-image: url(/Jony-portifolio/imagens/fomacao-borda.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -1234,7 +1234,7 @@ footer p.agradecimento {
         align-items: center;
         background-color: var(--cinza-fundo);
         background-position: center center;
-        background-image: url(/imagens/fomacao-borda2.png);
+        background-image: url(/Jony-portifolio/imagens/fomacao-borda2.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -1416,7 +1416,7 @@ footer p.agradecimento {
         height: 4035px;
         margin: 126px auto 0px auto;
         background-color: var(--cinza-fundo);
-        background-image: url(/imagens/borda-formacao.png);
+        background-image: url(/Jony-portifolio/imagens/borda-formacao.png);
         background-size: cover;
     }
 }
