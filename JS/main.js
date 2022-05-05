@@ -6,7 +6,7 @@ const nav = document.querySelector('#nav');
 
 /* Scroll Suave -------------------------------------------------------*/
 menuLinks.forEach(item => {
-  item.addEventListener('click', scrollToId)
+  item.addEventListener('click', scrollToId, {passive:false})
 })
 
 function scrollToId(event){
@@ -39,15 +39,15 @@ function toggleMenu(event){
     
 }
 
-botao.addEventListener('touchstart', toggleMenu);
-botao.addEventListener('click', toggleMenu);
+botao.addEventListener('touchstart', toggleMenu,{passive:true});
+botao.addEventListener('click', toggleMenu, {passive:true});
 
 /*Fechar menu  --------------------------------------------------------------*/
 
   for(const links of menuLinks){
     links.addEventListener('click', function(){
       nav.classList.remove('active');
-    })
+    },{passive:true})
   }
 
 /*--------------------------------------------------------------*/
@@ -109,7 +109,8 @@ function animeScroll(){
 animeScroll();
 
 if(target.length){
-  window.addEventListener('scroll', debounce(function(){
-  animeScroll();
-  }, 50));
+  window.addEventListener('scroll',debounce(function(){
+    animeScroll();
+    console.log(animeScroll)
+  }, 50),{passive: true})
 }
