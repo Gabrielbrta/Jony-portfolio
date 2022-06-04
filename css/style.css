@@ -267,13 +267,13 @@ section.sobre-container {
 }
 
 .imagem-sobre {
-    width: 100%;
-    min-width: 375px;
+    max-width: 100%;
     height: auto;
     padding-left: 2.81rem;
     margin-top: 6.93rem;
-
-
+}
+div.imagem-conteudo img{
+    width: 100%;
 }
 
 .title-sobre {
@@ -448,10 +448,13 @@ div.box-conteudo {
     font-family: serif;
 }
 
+.svg-container{
+    max-width: 100%;
+}
+
 .logo-formacoes {
-    border: 4px solid var(--cinza-fundo);
     border-radius: 4px;
-    width: 20%;
+    border: 5px solid var(--cinza-fundo);
 }
 
 /* BOX Formações =================================================*/
@@ -1007,7 +1010,6 @@ footer p.agradecimento {
     }
 
     .logo-formacoes {
-        width: 30%;
         border: 4px solid var(--cinza-fundo);
         border-radius: 4px;
     }
@@ -1272,7 +1274,6 @@ footer p.agradecimento {
     }
 
     .logo-formacoes {
-        width: 30%;
         border: 4px solid var(--cinza-fundo);
         border-radius: 4px;
     }
@@ -1315,28 +1316,28 @@ footer p.agradecimento {
         font-size: 2rem;
     }
 
-    [data-anime] {
+    .js [data-anime] {
         opacity: 0;
         width: 70%;
         transition: .1s ease;
     }
 
-    [data-anime="left"] {
+    .js [data-anime="left"] {
         transform: translate3d(-50px, 0, 0);
 
     }
 
-    [data-anime="top"] {
+    .js [data-anime="top"] {
         transform: translate3d(0, -50px, 0);
 
     }
 
-    [data-anime="right"] {
+    .js [data-anime="right"] {
         transform: translate3d(50px, 0, 0);
 
     }
 
-    [data-anime].animate {
+    .js [data-anime].animate {
         opacity: 1;
         width: 100%;
         transform: translate3d(0px, 0px, 0px);
@@ -1420,25 +1421,28 @@ footer p.agradecimento {
         background-size: cover;
     }
 }
+[data-anime]{
+    opacity: 1;
+}
 
-[data-anime] {
+.js [data-anime] {
     opacity: 0;
     transition: .2s ease;
 }
 
-[data-anime="left"] {
+.js [data-anime="left"] {
     transform: translate3d(-20px, 0, 0);
 }
 
-[data-anime="top"] {
+.js [data-anime="top"] {
     transform: translate3d(0, -50px, 0);
 }
 
-[data-anime="right"] {
+.js [data-anime="right"] {
     transform: translate3d(5px, 0, 0);
 }
 
-[data-anime].animate {
+.js [data-anime].animate {
     opacity: 1;
     transform: translate3d(0px, 0px, 0px);
 }
